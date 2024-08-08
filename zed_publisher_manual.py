@@ -13,7 +13,7 @@ class zed_publisher_manual(Node):
         self.A = self.create_subscription(CameraInfo,"/zed_left/zed_node_0/left/A",self.A_callback,10)
         self.B = self.create_subscription(Image,"/zed_left/zed_node_0/left/B",self.B_callback,10)
         self.C = self.create_subscription(CameraInfo,"/zed_right/zed_node_1/left/C",self.C_callback,10)
-        self.B = self.create_subscription(Image,"/zed_right/zed_node_1/left/D",self.D_callback,10)
+        self.D = self.create_subscription(Image,"/zed_right/zed_node_1/left/D",self.D_callback,10)
         self.zed_publisher_A = self.create_publisher(CameraInfo,"left_0_A",10)
         self.zed_publisher_B = self.create_publisher(Image,"left_0_B",10)
         self.zed_publisher_C = self.create_publisher(CameraInfo,"left_1_C",10)
